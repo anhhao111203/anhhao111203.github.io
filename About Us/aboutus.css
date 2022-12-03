@@ -1,0 +1,411 @@
+@import url(http://fonts.googleapis.com/css?family=Anaheim);
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box
+}
+
+*:before,
+*:after {
+    box-sizing: border-box
+}
+
+html,
+body {
+    min-height: 100%
+}
+
+body {
+    background-color: black;
+}
+.quotes {
+    position: relative;
+    top: 80px;
+    display: table;
+    margin: 2% auto 0;
+    text-transform: uppercase;
+    font-family: 'Times Roman', sans-serif;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 1px white, 0 3px #EA2C62;
+}
+.ourstory {
+    position: relative;
+    top: 100px;
+    display: table;
+    margin: 2% auto 0;
+    text-transform: uppercase;
+    font-family: Brush Script MT;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 1px white, 0 10px black;
+}
+
+
+.container {
+    top: 500px;
+    margin: 4% auto;
+    width: 140px;
+    height: 70vh;
+    position: relative;
+    perspective: 1000px;
+}
+
+#carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotation 20s infinite linear
+}
+
+#carousel:hover {
+    animation-play-state: paused
+}
+
+#carousel figure {
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    left: 10px;
+    top: 10px;
+    background: black;
+    overflow: hidden;
+    border: solid 3px black
+}
+
+#carousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(2) {
+    transform: rotateY(40deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(3) {
+    transform: rotateY(80deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(4) {
+    transform: rotateY(120deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(5) {
+    transform: rotateY(160deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(6) {
+    transform: rotateY(200deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(7) {
+    transform: rotateY(240deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(8) {
+    transform: rotateY(280deg) translateZ(288px)
+}
+
+#carousel figure:nth-child(9) {
+    transform: rotateY(320deg) translateZ(288px)
+}
+
+
+#carousel figure img{
+    height:200px;
+}
+#carousel img:hover {
+    -webkit-filter: grayscale(0);
+    transform: scale(1.2, 1.2)
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg)
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
+}
+
+    .nav-header{ 
+    position: fixed; /* When we scroll down the page, this menu is always showing */
+    top: 0; /* this menu will show at the top of page */
+    width: 100%;
+    z-index: 1;
+    height: 14%;
+    }
+
+    .nav-header .menu{
+    width: 100%;
+    margin: auto;
+    display: table;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px;
+    }
+
+    .menu .logo a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Brush Script MT;
+
+    /* Line 33-56: color animation of logo */
+    background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+          font-size: 35px;
+    }
+    @keyframes textclip {
+        to {
+          background-position: 200% center;
+        }
+    }
+    
+    .menu ul{
+    display: table;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    }
+    .menu ul li{
+    list-style: none;
+    margin-left: 7px;
+    display: inline-block;
+    float: none;
+    }
+
+    .menu ul li:nth-child(1){
+      padding-left: 120px;
+    }
+    .menu ul li:nth-child(6){
+    float: right;
+    }
+
+    .menu ul li:nth-child(5){
+    float: right;
+    padding-right: 70px;
+
+    }
+
+    .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 650;
+    padding: 8px 15px;
+    border-radius: 15% 15%;
+    transition: all 0.6s ease;
+    }
+    .menu .signin{
+    background: #fff;
+    color: black;
+    }
+    .menu ul li a:hover{
+    background: #fff;
+    color: black;
+    }
+
+    .img img{
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        }
+        .center{
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        }
+    
+        .center .title{
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: Comic Sans MS;
+        }
+
+        .quotesArea{
+            background-color: #e63f6e;
+            height: 450px;
+        }
+        .inBold{
+            font-size: 1.2em;
+        }
+        .icon{
+            position: relative;
+            top: 70px; 
+            color: white;
+            text-align: center;
+            font-size: 60px;
+        }
+
+        .whoWeAre{
+            position: relative;
+            top: 200px; 
+            color: white;
+            text-align: center;
+            padding-left: 100px;
+            padding-right: 100px;
+            font-family: sans-serif;
+        }
+        .whoWeAre .title{
+            font-size: 35px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .whoWeAre .script{
+            font-size: 20px;
+            font-weight: 50;
+            padding-top: 60px;
+
+        }
+
+        .whatWeBelieve{
+            position: relative;
+            top: 350px; 
+            color: white;
+            text-align: center;
+            padding-left: 100px;
+            padding-right: 100px;
+            font-family: sans-serif;
+        }
+        .whatWeBelieve .title{
+            font-size: 35px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .whatWeBelieve .script{
+            font-size: 20px;
+            font-weight: 50;
+            padding-top: 60px;
+
+        }
+
+        .hh1{
+            text-align: center;
+            color: white;
+            padding-top: 350px;
+            font-size: 60px;
+            font-family: Comic Sans MS;
+            
+        }
+
+    footer {
+        top: 470%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        background-color: black;
+      }
+      footer div.social-media-links {
+        background: black;
+        overflow: hidden;
+        padding-bottom: 30px;
+        padding-top: 20px;
+        text-align: center;
+      }
+      footer div.social-media-links ul {
+        margin: 0;
+        padding: 0;
+      }
+      footer div.social-media-links li {
+        display: inline;
+        margin: 0;
+        padding: 10px;
+      }
+      footer div.social-media-links a {
+        border-bottom: 0px solid rgba(0, 0, 0, 0.95);
+        border-radius: 4px;
+        box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+        display: inline-block;
+        height: 30px;
+        padding: 30px;
+        position: relative;
+        transition: 0.2s ease-in;
+        width: 30px;
+      }
+      footer div.social-media-links a svg {
+        left: 20px;
+        position: absolute;
+        top: 20px;
+        height: 30px;
+        width: 30px;
+      }
+      footer div.social-media-links a svg.glow path,
+      footer div.social-media-links a svg.glow circle {
+        fill: rgba(0, 0, 0, 0);
+      }
+      footer div.social-media-links a svg path,
+      footer div.social-media-links a svg circle {
+        fill: white;
+        transition: 0.2s ease-in;
+      }
+      footer div.social-media-links a:hover {
+        transform: translateY(-4px);
+        box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px rgba(14, 186, 199, 0.25), 0 83px 4px 0px rgba(14, 186, 199, 0.95);
+      }
+      footer div.social-media-links a:hover svg.glow {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+        filter: blur(2px);
+      }
+      footer div.social-media-links a:hover svg.glow path,
+      footer div.social-media-links a:hover svg.glow circle {
+        fill: rgba(14, 186, 199, 0.6);
+      }
+      footer div.social-media-links a:hover svg path,
+      footer div.social-media-links a:hover svg circle {
+        fill: #0ebac7;
+      }
+
+      footer .fa-ul .fa-li
+      {
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .reveal
+            {
+                position: absolute;
+                transform: translateY(100px);
+                opacity: 0;
+                transition: 1s all ease;
+            }
+
+      .reveal.active
+      {
+          transform: translateY(0);
+          opacity: 1;
+      }
