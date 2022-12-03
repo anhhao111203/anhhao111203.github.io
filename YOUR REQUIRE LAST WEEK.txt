@@ -1,0 +1,13 @@
+YOUR REQUIRE LAST WEEK:
+- SignIn and Register now have been active: you must register first, then sign in. 
+If your account and password've been correct, you'll be moved to the homepage.
+- "Add to cart" button's also active, but it's only active on Dog category :((((. When you click "Add to cart" 
+button, that product'll be added to your Shopping Cart.
+- I've added the icon "Shopping Cart"
+- In Shopping Cart, all the products you added before will show there and the total price as well. But you 
+still can't change the quantity of products, can't remove products from your cart. I'll handle these things ASAP.
+
+
+MY EXTRA PAGE:
+- "Support" button: when submiting this form, I'll received your message through Email.
+- About Us, Cat Nutrition, GuineaPig pages are also completed.
